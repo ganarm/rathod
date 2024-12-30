@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="assets/tablogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica (GM) : About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Resetting basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            line-height: 1.6;
+            padding: 0;
+            position: relative;
+        }
+
+        /* Logo as a watermark */
+        body::before {
+            content: url('assets/logo.png'); /* Path to your logo */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.1;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            font-size: 3.5em;
+            color: #FFD700;
+            margin-bottom: 20px;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        .profile-info {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 40px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            animation: slideIn 1s ease-out;
+        }
+
+        .profile-info img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin-right: 20px;
+            object-fit: cover;
+            border: 3px solid #FFD700;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth transition */
+        }
+
+        .profile-info img:hover {
+            transform: scale(1.1); /* Scales the image and rotates it slightly */
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for extra effect */
+        }
+
+
+        .bio {
+            max-width: 800px;
+            margin-left: 40px;
+        }
+
+        .bio h2 {
+            font-size: 2.2em;
+            font-weight: 600;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .bio p {
+            font-size: 1.1em;
+            color: #e0e0e0;
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .bio p a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        .mission {
+            margin-bottom: 40px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .mission h2 {
+            font-size: 2.5em;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .mission p {
+            font-size: 1.1em;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+
+        .contact-details {
+            margin-bottom: 40px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .contact-details h2 {
+            font-size: 2.5em;
+            color: #FFD700;
+            margin-bottom: 15px;
+        }
+
+        .contact-details p {
+            font-size: 1.1em;
+            color: #e0e0e0;
+            margin: 10px 0;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .social-links a {
+            color: #FFD700;
+            font-size: 1.7em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        .social-links a i {
+            transition: transform 0.3s;
+        }
+
+        .social-links a:hover i {
+            transform: scale(1.3);
+        }
+
+        /* Adding responsiveness */
+        @media (max-width: 768px) {
+            .profile-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-info img {
+                margin-bottom: 20px;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2.8em;
+            }
+        }
+
+        /* Keyframe animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .highlight {
+            color: #FFD700;
+            background-color: #333;
+            padding: 0 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>About Us</h1>
+
+        <div class="profile-info">
+            <img src="assets/ganesh.jpg" alt="Ganesh Rajendra Mali">
+            <div class="bio">
+                <h2>Ganesh Rajendra Mali</h2>
+                <p>
+                    I am the founder of <span class="highlight">Logica by GM (Code Crafter)</span>, a passionate web developer committed to building user-centric websites. I hold a Bachelor's degree in Computer Science from HPT Arts and RYK Science College, Nashik, under SPPU University. Currently, I am pursuing an MSc in Computer Science from Fergusson College, Pune.
+                </p>
+                <p>
+                    My mission is to develop websites that meet user requirements, ensuring a seamless and intuitive experience for all users. I am constantly learning and evolving with new technologies to deliver the best solutions for my clients.
+                </p>
+                <p>
+                    When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source projects, or enjoying time with friends and family. 
+                </p>
+            </div>
+        </div>
+
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>
+                At Logica by GM, we focus on delivering tailored web development solutions that align with our client's unique needs. Whether you're a business or an individual, our goal is to provide high-quality websites that are functional, user-friendly, and visually appealing. We believe that the web should be an engaging space where users can interact effortlessly and get the information they need.
+            </p>
+            <p>
+                Our mission is to bridge the gap between technology and the user experience by crafting sites that are not just functional but beautiful, accessible, and future-ready.
+            </p>
+        </div>
+
+        <div class="contact-details">
+            <h2>Contact Information</h2>
+            <p>Email : <a href="mailto:ganarm2003@gmail.com" style="text-decoration: none; color:#FFD700;">ganarm2003@gmail.com</a></p>
+            <p>Mobile Number : <a style="text-decoration: none;">+91-9021817579</a></p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ganesh-mali-114a15280" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/ganesh_.mali/profilecard/?igsh=MW1pNTIyYXh5bjNubw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@gm_03/videos" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://github.com/ganarm" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/share/z69QoGStnXg7QCD7/" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+    </div>
+
+</body>
+</html>

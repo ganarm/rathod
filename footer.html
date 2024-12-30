@@ -1,0 +1,74 @@
+<footer class="footer">
+    <div class="section__container footer__container">
+        <div class="footer__col">
+
+            <!-- video Started-->
+            <div id="video-container">
+                <video id="myVideo" width="320" height="240" controls autoplay muted loop>
+                    <source src="assets/intro-v.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <script>
+                var video = document.getElementById("myVideo");
+                var videoContainer = document.getElementById("video-container");
+
+                var options = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.5
+                };
+
+                var observer = new IntersectionObserver(callback, options);
+
+                observer.observe(videoContainer);
+
+                function callback(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // Video is in view, play it
+                            video.play();
+                            //  video.muted = false;
+                        } else {
+                            // Video is out of view, pause it
+                            video.pause();
+                        }
+                    });
+                }
+            </script>
+            <!-- video  ended-->
+
+
+        </div>
+        <div class="footer__col">
+            <h3>INFORMATION</h3>
+            <p><a href="home.php">Home</a></p>
+            <p><a target="_blank" href="about.html">About</a></p>
+            <p><a target="_blank" href="feedback.php">Feedback</a></p>
+        </div>
+        <div class="footer__col">
+            <h3>CONTACT</h3>
+            <p>
+                <a target="_blank" href="mailto:ganarm2003@gmail.com">ganarm2003@gmail.com</a>
+            </p>
+            <p>+91-9021817579</p>
+            <div class="footer__logo"><a target="_blank" href="about.html"><img src="assets/logica-white.png"></a></div>
+        </div>
+    </div>
+    <div class="section__container footer__bar">
+        <div>
+            <p>Copyright © 2024 LO<b>G</b>ICA. All rights reserved.</p>
+        </div>
+        <div class="socials">
+            <span><a href="https://github.com/ganarm" class="text-muted" target="_blank"><i
+                        class="ri-github-line"></i></a></span>
+            <span><a href="https://www.youtube.com/@gm_03/videos" class="text-muted" target="_blank"><i
+                        class="ri-youtube-fill"></i></a></span>
+            <span><a href="https://www.facebook.com/share/z69QoGStnXg7QCD7/" class="text-muted" target="_blank"><i
+                        class="ri-facebook-fill"></i></a></span>
+            <span><a href="https://www.instagram.com/ganesh_.mali/profilecard/?igsh=MW1pNTIyYXh5bjNubw=="
+                    class="text-muted" target="_blank"><i class="ri-instagram-line"></i></a></span>
+        </div>
+    </div>
+</footer>
